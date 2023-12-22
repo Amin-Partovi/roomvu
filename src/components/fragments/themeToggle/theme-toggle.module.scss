@@ -47,11 +47,13 @@
   left: 12px;
   fill: #fff;
   transition: 0.3s;
+  background-color: transparent;
 }
 .moon-icon {
   left: 84px;
   fill: #7e7e7e;
   transition: 0.3s;
+  background-color: transparent;
 }
 .theme-toggle-input:checked + .theme-toggle-label .sun-icon {
   fill: #7e7e7e;

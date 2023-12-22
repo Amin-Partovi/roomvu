@@ -1,0 +1,20 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .title {
+    font-size: 24px;
+    font-weight: 900;
+  }
+
+  .header-right-part {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    .author {
+      font-style: italic;
+    }
+  }
+}
