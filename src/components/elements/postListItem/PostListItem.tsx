@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 
-import { convertIdToDate, generateColor } from "@/utils";
+import { ROUTES, convertIdToDate, generateColor } from "@/utils";
 import { Post } from "@/queries/posts/types";
 
 import styles from "./post-list-item.module.scss";
@@ -19,7 +19,7 @@ const PostListItem = ({ post }: { post: Post }) => {
   return (
     <Link
       className={`${styles["post-card"]} ${isHovered ? styles.hovered : ""}`}
-      href={`/${id}`}
+      href={ROUTES.POST(id)}
       onMouseEnter={handleHover}
       onMouseLeave={handleHover}
     >

@@ -1,0 +1,21 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  padding: 56px 0;
+
+  .title {
+    font-size: 40px;
+    font-weight: 900;
+  }
+  .date {
+    font-size: 13px;
+    margin: 8px 0 56px 0;
+  }
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 0;
+}

@@ -7,6 +7,11 @@
   text-decoration: none;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 :root {
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
@@ -16,6 +21,8 @@
   --background-color: white;
   --light-orange: #ffcc89;
   --dark-orange: #d8860b;
+  --pink: lab(33 42.09 -43.19);
+  --purple: lab(63 59.32 -1.47);
 }
 
 [data-theme="dark"] {
