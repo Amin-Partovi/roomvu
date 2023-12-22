@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.scss";
 
-const inter = Inter({ subsets: ["latin"] });
+import { StoreProvider } from "@/store";
+import ThemeProvider from "./ThemeProvider";
+
+import "./globals.scss";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +17,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <StoreProvider>
+        <ThemeProvider>{children}</ThemeProvider>
+      </StoreProvider>
     </html>
   );
 }
