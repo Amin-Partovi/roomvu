@@ -4,6 +4,7 @@ import { StoreProvider } from "@/store";
 import ThemeProvider from "./ThemeProvider";
 
 import "./globals.scss";
+import { ReactQueryProvider } from "@/queries";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,7 +19,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <StoreProvider>
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          <ReactQueryProvider>{children}</ReactQueryProvider>
+        </ThemeProvider>
       </StoreProvider>
     </html>
   );
