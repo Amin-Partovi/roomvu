@@ -1,0 +1,27 @@
+.post-card {
+  padding: 16px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: 0.1s transform;
+  &.hovered {
+    filter: blur(1px);
+  }
+  &:hover {
+    transform: scale(1.01);
+  }
+  .title {
+    font-size: 28px;
+    font-weight: 900;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .date {
+    font-size: 13px;
+  }
+  .body {
+    font-size: 16px;
+  }
+}

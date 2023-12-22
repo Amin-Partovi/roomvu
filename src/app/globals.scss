@@ -4,6 +4,7 @@
   box-sizing: border-box;
   background-color: var(--background-color);
   color: var(--foreground-color);
+  text-decoration: none;
 }
 
 :root {
@@ -13,8 +14,6 @@
 
   --foreground-color: black;
   --background-color: white;
-  --light-link: lab(62.916 59.272 -1.587);
-  --dark-link: lab(80.992 32.325 -7.103);
   --light-orange: #ffcc89;
   --dark-orange: #d8860b;
 }
