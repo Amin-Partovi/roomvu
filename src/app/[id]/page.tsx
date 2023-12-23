@@ -13,7 +13,7 @@ const PostDetail = ({ params }: { params: { id: number } }) => {
 
   if (isLoading) {
     return (
-      <div className={styles.loading}>
+      <div className={styles.loading} data-testid="loading-spinner">
         <Spinner />
       </div>
     );

@@ -22,6 +22,7 @@ const PostListItem = ({ post }: { post: Post }) => {
       href={ROUTES.POST(id)}
       onMouseEnter={handleHover}
       onMouseLeave={handleHover}
+      data-testid="post-item"
     >
       <h2 className={styles.title} style={{ color: generateColor(id) }}>
         {title}

@@ -8,7 +8,9 @@
     "next/core-web-vitals",
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
-    "prettier"
+    "prettier",
+    "plugin:testing-library/react",
+    "plugin:jest-dom/recommended"
   ],
   "overrides": [
     {
@@ -32,7 +34,8 @@
     "react-hooks/exhaustive-deps": "warn",
     "@typescript-eslint/no-unused-vars": "error",
     "unused-imports/no-unused-imports": "error",
-    "react/react-in-jsx-scope": "off"
+    "react/react-in-jsx-scope": "off",
+    "@typescript-eslint/no-var-requires": "warn"
   },
   "ignorePatterns": ["!src/**/*"]
 }

@@ -4,7 +4,7 @@ import { useMemo } from "react";
 import { usePostsQuery } from "@/queries";
 import { PostListItem, Spinner } from "@/components/elements";
 
-import styles from "./page.module.scss";
+import styles from "./home.module.scss";
 
 export default function Home() {
   const { data: posts, isLoading } = usePostsQuery();
@@ -15,7 +15,7 @@ export default function Home() {
 
   if (isLoading) {
     return (
-      <div className={styles.loading}>
+      <div className={styles.loading} data-testid="loading-spinner">
         <Spinner />
       </div>
     );

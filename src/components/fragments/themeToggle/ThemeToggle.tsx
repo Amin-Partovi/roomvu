@@ -26,9 +26,19 @@ const ThemeToggle = () => {
         htmlFor="dark-mode-toggle"
         className={styles["theme-toggle-label"]}
       >
-        <Sun className={styles["sun-icon"]} width={24} color="gray" />
+        <Sun
+          className={styles["sun-icon"]}
+          width={24}
+          color="gray"
+          data-testid="sun-icon"
+        />
 
-        <Moon className={styles["moon-icon"]} width={24} color="gray" />
+        <Moon
+          className={styles["moon-icon"]}
+          width={24}
+          color="gray"
+          data-testid="moon-icon"
+        />
       </label>
     </>
   );
