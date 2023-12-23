@@ -4,12 +4,12 @@ import React from "react";
 
 import { usePostQuery } from "@/queries";
 import { Spinner } from "@/components/elements";
-import { convertIdToDate } from "@/utils";
+import { TEXTS, convertIdToDate } from "@/utils";
 
 import styles from "./page.module.scss";
 
 const PostDetail = ({ params }: { params: { id: number } }) => {
-  const { data, isLoading } = usePostQuery({ id: params.id });
+  const { data, isLoading, isError } = usePostQuery({ id: params.id });
 
   if (isLoading) {
     return (
@@ -19,8 +19,8 @@ const PostDetail = ({ params }: { params: { id: number } }) => {
     );
   }
 
-  if (!data) {
-    return <></>;
+  if (!data || isError) {
+    return <h1 className={styles.error}>{TEXTS.ERROR}</h1>;
   }
 
   const { title, id, body } = data;
