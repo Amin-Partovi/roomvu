@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 import { StoreProvider } from "@/store";
-import ThemeProvider from "./ThemeProvider";
+import ThemeProvider from "./_layout/ThemeProvider";
 
 import { ReactQueryProvider } from "@/queries";
 import Container from "./_layout/Container";
@@ -21,16 +21,18 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <StoreProvider>
-        <ThemeProvider>
-          <ReactQueryProvider>
-            <Container>
-              <Header />
-              {children}
-            </Container>
-          </ReactQueryProvider>
-        </ThemeProvider>
-      </StoreProvider>
+      <body>
+        <StoreProvider>
+          <ThemeProvider>
+            <ReactQueryProvider>
+              <Container>
+                <Header />
+                {children}
+              </Container>
+            </ReactQueryProvider>
+          </ThemeProvider>
+        </StoreProvider>
+      </body>
     </html>
   );
 }

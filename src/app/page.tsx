@@ -10,7 +10,7 @@ export default function Home() {
   const { data: posts, isLoading } = usePostsQuery();
   const sortedPosts = useMemo(
     () => (posts ? posts.sort((a, b) => a.id - b.id) : []),
-    [posts]
+    [posts],
   );
 
   if (isLoading) {
