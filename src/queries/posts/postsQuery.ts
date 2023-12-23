@@ -5,7 +5,7 @@ import { ENDPOINTS, Request } from "@/utils";
 import { Post } from "./types";
 
 function getPosts() {
-  return Request<Post[], Error>({ method: "GET", endpoint: ENDPOINTS.POSTS });
+  return Request<Post[]>({ method: "GET", endpoint: ENDPOINTS.POSTS });
 }
 
 export function usePostsQuery() {

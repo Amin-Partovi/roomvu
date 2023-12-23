@@ -5,7 +5,7 @@ import { ENDPOINTS, Request } from "@/utils";
 import { Post } from "./types";
 
 function getPost({ id }: { id: number }) {
-  return Request<Post, Error>({
+  return Request<Post>({
     method: "GET",
     endpoint: ENDPOINTS.POST({ id }),
   });

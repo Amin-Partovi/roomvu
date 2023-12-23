@@ -15,7 +15,7 @@ const DEFAULT_API_CONFIG = {
   paramsSerializer: (params: string) => objectToQueryString(params),
 };
 
-export function Request<Data extends unknown, Error extends unknown>({
+export function Request<R>({
   endpoint,
   config = {},
   method = "GET",
@@ -25,7 +25,7 @@ export function Request<Data extends unknown, Error extends unknown>({
   config?: AxiosRequestConfig;
   method?: "POST" | "GET" | "PUT" | "PATCH" | "DELETE";
   params?: any;
-}): Promise<AxiosResponse<any, any>> {
+}): Promise<AxiosResponse<R, any>> {
   return axios({
     params,
     method,
