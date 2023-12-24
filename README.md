@@ -49,8 +49,7 @@ Then stop the container using:
 the structure of the project is inspired by Atomic Design.
 
 
-
-    .
+```JSX
     src/
     ├── components/
     │   ├── elements/
@@ -96,26 +95,33 @@ the structure of the project is inspired by Atomic Design.
     │   │   ├── types.ts
     │   │   └── ...
     │   └── index.ts
+    ├── store/
+    │   ├── store.ts
+    │   ├── provider.tsx
+    │   ├── ...
+    │   └── index.ts
     └── types/
         ├── generalTypes.ts
         ├── ...
         └── index.ts
-
+```  
 
 
 src folder divided to the following modules:
 
-Elements: This folder contains shared components, also known as common components, that cannot be further divided into smaller independent components.
-Fragments: Fragments are reusable components that are built using elements. They combine multiple elements to form more complex and self-contained components.
-app: The _layouts is a private folder encompasses components related to the overall layout and container structure of the application. These components define the high-level structure and positioning of other components. The routes are organized based on the Next.js app router.
+Elements: This folder contains shared components, also known as common components, that cannot be further divided into smaller independent components.  
 
-In addition to these modules, there are other ones such as utils, hooks, queries, ...
+Fragments: Fragments are reusable components that are built using elements. They combine multiple elements to form more complex and self-contained components.  
+
+app: The _layouts is a private folder encompasses components related to the overall layout and container structure of the application. These components define the high-level structure and positioning of other components. Other files in the app directory are the app routes organized based on the Next.js app router.
+
+In addition to these modules, there are other ones such as utils, queries, stores, ... (hooks and types are not applicable for this project )
 
 Within this architecture, each module except app directory has its own index file that serves as a central point of export for all the components within that module.
 
 # About the project
 
-The project relies on three APIs: https://jsonplaceholder.typicode.com/posts and https://jsonplaceholder.typicode.com/posts/[id].
+The project relies on two APIs: https://jsonplaceholder.typicode.com/posts and https://jsonplaceholder.typicode.com/posts/[id].
 
 A Toggle Switch provided to change the theme of the website. Its state is stored using Redux and persisted in local storage.  
 

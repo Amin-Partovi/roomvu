@@ -12,6 +12,11 @@ import "./globals.scss";
 export const metadata: Metadata = {
   title: "Overreacted",
   description: "Recreate Dan Abramov’s personal weblog using React.",
+
+  openGraph: {
+    title: "Overreacted",
+    description: "Recreate Dan Abramov’s personal weblog using React.",
+  },
 };
 
 export default function RootLayout({
